@@ -6,7 +6,7 @@ class Solution {
           rem = n % 3;
           n /= 3;
           if(rem == 0){
-              n--; 
+              n--;
               rem = 4;
           }
           if(rem == 3){
@@ -14,7 +14,7 @@ class Solution {
           }
           answer = Integer.toString(rem) + answer;
       }
-         
+
       System.out.print(answer);
       return answer;
   }

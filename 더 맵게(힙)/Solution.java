@@ -2,17 +2,17 @@ import java.util.*;
 class Solution {
     public int solution(int[] scoville, int K) {
         PriorityQueue<Integer> heap = new PriorityQueue<Integer>();
-        
+
         int answer = 0;
-        
+
         for(int i = 0; i<scoville.length; i++)
             heap.add(scoville[i]);
-        
-        for(int i = 0; i<scoville.length; i++){          
+
+        for(int i = 0; i<scoville.length; i++){
             if( heap.size()<=1&& heap.peek() < K){
-                answer = -1;    
+                answer = -1;
                 break;
-            } 
+            }
             if(heap.peek()<K){
                 int min = heap.poll();
                 int min2 = heap.poll();
@@ -21,10 +21,10 @@ class Solution {
                 answer++;
             }
             if(heap.peek() >= K)
-                break;      
+                break;
         }
-        
-        
+
+
         return answer;
     }
 }

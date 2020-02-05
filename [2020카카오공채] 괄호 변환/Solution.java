@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Solution {
-    
+
     Stack<Character> stack = new Stack<Character>();
     String u;
     String v;
@@ -16,7 +16,7 @@ class Solution {
         String answer = divineString(p);
         return answer;
     }
-    public String divineString(String str){ 
+    public String divineString(String str){
         if(check(str))
             return str;
         String u = "";
@@ -32,9 +32,9 @@ class Solution {
         u += ch;
         if(ch == leftBracket)
             leftIndex++;
-        else 
+        else
             rightIndex++;
-        
+
         while(leftIndex != rightIndex){
             ch = str.charAt(k);
             if(ch == leftBracket)
@@ -51,7 +51,7 @@ class Solution {
         if(check(u)){
             v = divineString(v);
         System.out.println(u + " " + v);
-        }            
+        }
         else{
             s += "(";
             s += divineString(v);
@@ -77,11 +77,11 @@ class Solution {
                 stack.pop();
             }else{
                 stack.push(ch);
-            }            
-        } 
+            }
+        }
         System.out.println(stack);
         if(stack.isEmpty())
             return true;
-        return false;        
+        return false;
     }
 }

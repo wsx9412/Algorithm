@@ -35,8 +35,8 @@ class Solution
 				}else {
 					for(int k = 0; k < n; k++) {
 						if(price[k][1] == car * -1) {
-							money += price[k][0] * weight[price[k][1]-1];	
-							price[k][1] = 0;	
+							money += price[k][0] * weight[price[k][1]-1];
+							price[k][1] = 0;
 							break;
 						}
 					}
@@ -44,7 +44,7 @@ class Solution
 				if(!waiting.isEmpty()) {
 					for(int k = 0; k < n; k++) {
 						if(price[k][1] == 0) {
-							price[k][1] = waiting.poll();		
+							price[k][1] = waiting.poll();
 							break;
 						}
 					}

@@ -16,8 +16,8 @@ class Solution {
                 sum[j] += 1;
              else
                 sum[j] += sum[j-money[i]];
-         }   
-        }       
+         }
+        }
         return sum;
     }
 }

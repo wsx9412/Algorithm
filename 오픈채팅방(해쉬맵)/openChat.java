@@ -3,15 +3,15 @@ package openChat;
 import java.util.*;
 
 public class openChat {
-	
+
 	public String[] solution(String[] record) {
         HashMap<String,String> hash = new HashMap<String,String>();
         List<String> answer = new ArrayList<String>();
-        //ÀÔÀå½Ã, ´Ð³×ÀÓ º¯°æ µîÀÇ °úÁ¤À» °ÅÃÄ ÃÖÁ¾ÀûÀ¸·Î »ç¶÷µéÀÇ ´Ð³×ÀÓÀ» °áÁ¤
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         for(String str:record){
             Check(hash, str);
         }
-        //°áÁ¤µÈ ´Ð³×ÀÓÀ» ÀÌ¿ëÇÏ¿© Ãâ·Â
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½
         for(String str:record){
             SetString(hash, answer, str);
         }
@@ -19,7 +19,7 @@ public class openChat {
         result = answer.toArray(result);
         return result;
     }
-	//´Ð³×ÀÓÀ» °áÁ¤ÇÏ´Â ¸Þ¼Òµå
+	//ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
     public void Check(HashMap<String,String> hash, String str){
         String[] chat;
         chat = str.trim().split(" ");
@@ -28,16 +28,16 @@ public class openChat {
         else if(chat[0].equals("Change")){
             hash.remove(chat[1]);
             hash.put(chat[1],chat[2]);
-        }     
+        }
     }
-    //°áÁ¤µÈ ´Ð³×ÀÓÀ» ÀÌ¿ëÇÏ¿© Ãâ·ÂÇÏ´Â ¸Þ¼Òµå
-    public void SetString(HashMap<String,String> hash, List<String> answer, String str){ 
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
+    public void SetString(HashMap<String,String> hash, List<String> answer, String str){
         String[] chat;
         chat = str.trim().split(" ");
         if(chat[0].equals("Enter"))
-            answer.add(hash.get(chat[1])+"´ÔÀÌ µé¾î¿Ô½À´Ï´Ù.");
+            answer.add(hash.get(chat[1])+"ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½Ï´ï¿½.");
         else if(chat[0].equals("Leave"))
-            answer.add(hash.get(chat[1])+"´ÔÀÌ ³ª°¬½À´Ï´Ù.");
+            answer.add(hash.get(chat[1])+"ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
     }
-    
+
 }

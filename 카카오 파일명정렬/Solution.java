@@ -4,7 +4,7 @@ class Solution {
     String head2;
     String number1;
     String number2;
-    
+
   public String[] solution(String[] files) {
       String[] answer = {};
       List<String> array = Arrays.asList(files);

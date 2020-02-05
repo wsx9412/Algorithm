@@ -5,11 +5,11 @@ class Solution {
   public int[] solution(int m, int n, int[][] picture) {
       int numberOfArea = 0;
       int maxSizeOfOneArea = 0;
-      
+
       table = new boolean[m][n];
       pic = picture;
-      
-      
+
+
       for(int i = 0; i < m; i++){
         for(int j = 0; j< n; j++){
             if(!table[i][j] && pic[i][j] != 0){
@@ -17,9 +17,9 @@ class Solution {
                 numberOfArea++;
                 if(area>maxSizeOfOneArea)
                     maxSizeOfOneArea = area;
-            }            
-        } 
-      }          
+            }
+        }
+      }
       int[] answer = new int[2];
       answer[0] = numberOfArea;
       answer[1] = maxSizeOfOneArea;

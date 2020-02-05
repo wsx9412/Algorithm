@@ -4,7 +4,7 @@ class Solution {
     int max;
     double time;
     double[][] sec;
-        
+
   public int solution(String[] lines) {
       sec = new double[lines.length][2];
       max = 0;
@@ -20,9 +20,9 @@ class Solution {
           time += Double.parseDouble(lines[i].substring(17,23));
           sec[i][0] = time;
           sec[i][1] = Double.parseDouble(lines[i].substring(24,lines[i].length()-1));
-      }        
+      }
     }
-    
+
     public void getMax(){
         int startMax,endMax;
         BigDecimal start1;
@@ -39,13 +39,13 @@ class Solution {
                 end2 = BigDecimal.valueOf(sec[j][0]);
                 start2 = end1.subtract(BigDecimal.valueOf(sec[j][1]));
                 start2 = end2.add(BigDecimal.valueOf(0.001));
-                if((end1.compareTo(end1) <= 0 && end1.add(BigDecimal.valueOf(0.999)).compareTo(start2) >= 0) 
+                if((end1.compareTo(end1) <= 0 && end1.add(BigDecimal.valueOf(0.999)).compareTo(start2) >= 0)
                    || (end1.compareTo(end1) <=0 && end1.add(BigDecimal.valueOf(0.999)).compareTo(start2) >= 0)){
-                    startMax++;   
+                    startMax++;
                 }
-                if((start1.compareTo(end1) <= 0 && start1.add(BigDecimal.valueOf(0.999)).compareTo(start2) >= 0) 
+                if((start1.compareTo(end1) <= 0 && start1.add(BigDecimal.valueOf(0.999)).compareTo(start2) >= 0)
                    || (start1.compareTo(end1) <=0 && start1.add(BigDecimal.valueOf(0.999)).compareTo(start2)>= 0)){
-                    endMax++;   
+                    endMax++;
                 }
             }
             if(max == 0)

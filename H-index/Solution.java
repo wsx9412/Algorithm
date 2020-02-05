@@ -7,12 +7,12 @@ class Solution {
         int i = citations.length - 1;
         while(true){
             if(citations[0] > citations.length){
-                Hindex = citations.length;   
+                Hindex = citations.length;
                 break;
             }
             if(i >= 0){
                 Hindex = citations[i];
-                index++;               
+                index++;
                 i--;
             }
             while(Hindex > citations[i-1]){

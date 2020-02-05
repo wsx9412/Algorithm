@@ -7,7 +7,7 @@ class Solution {
         int divIndex = 1;
         int min;
         int i = 0;
-        
+
         while(divIndex < s.length()){
             str = s;
             result = "";
@@ -21,7 +21,7 @@ class Solution {
                     result += str;
                     str = "";
                     break;
-                }                    
+                }
                 while(str.indexOf(divStr) == 0){
                     i++;
                     str = str.replaceFirst(divStr,"");
@@ -30,7 +30,7 @@ class Solution {
                     result += i;
                 result += divStr;
             }
-            if(result.length() < minResult.length()){   
+            if(result.length() < minResult.length()){
                 minResult = result;
                 min = divIndex;
             }
@@ -38,5 +38,5 @@ class Solution {
         }
         return minResult.length();
     }
-    
+
 }

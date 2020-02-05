@@ -31,7 +31,7 @@ class Solution {
             }else{
                 if(endWork != 0){
                     result.add(endWork);
-                    endWork = 0;                    
+                    endWork = 0;
                 }
                 day++;
             }

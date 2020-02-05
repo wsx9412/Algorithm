@@ -2,7 +2,7 @@ import java.util.*;
 class Solution {
     PriorityQueue<Integer> heap;
     public int solution(int stock, int[] dates, int[] supplies, int k) {
-        heap = new PriorityQueue<>(Collections.reverseOrder()); 
+        heap = new PriorityQueue<>(Collections.reverseOrder());
         int answer = 0;
         int j = 0;
         for(int i = 0; i < k; i++){
@@ -14,7 +14,7 @@ class Solution {
                 }
                 stock+=heap.poll();
                 answer++;
-            }                
+            }
         }
         return answer;
     }

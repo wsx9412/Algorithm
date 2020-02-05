@@ -23,7 +23,7 @@ class Solution {
                 answer++;
                 System.out.println(i);
             }
-                
+
         }
         return answer;
     }
@@ -35,14 +35,14 @@ class Solution {
         }
         return true;
     }
-    
+
     public boolean isMaked(char[] num, int k){
         String n = k + "";
-        
+
         for(char a : num){
             n = n.replaceFirst(Character.toString(a),"");
         }
-            
+
         if(n.equals(""))
             return true;
         else

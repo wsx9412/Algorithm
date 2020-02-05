@@ -28,10 +28,10 @@ class Solution {
                     b++;
                 if(baseball[j][2] != b)
                     break;
-                
+
                 if(j == baseball.length-1)
                     answer++;
-                               
+
             }
         }
         return answer;

@@ -21,7 +21,7 @@ class Solution {
         int count;
         if(a == 0){
             result += "0";
-            return result;            
+            return result;
         }
         while(a>0){
             String newNum = "";
@@ -46,14 +46,14 @@ class Solution {
                     case 15:
                         newNum = "F";
                         break;
-                }            
+                }
             }
             else
                 newNum = Integer.toString(count);
             result = newNum + result;
             index++;
             a /= n;
-        }   
+        }
         return result;
     }
 }

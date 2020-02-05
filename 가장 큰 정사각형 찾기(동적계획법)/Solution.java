@@ -29,7 +29,7 @@ class Solution
         else
             if(a>=c)
                 return c;
-            else 
+            else
                 return a;
     }
 }

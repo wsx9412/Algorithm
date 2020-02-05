@@ -13,12 +13,12 @@ class Solution {
                 if(i>=0){
                     range[i] = true;
                 }
-                    
-            }                
+
+            }
         }
         while(rangeNumber < n)
-        { 
-            if(!range[rangeNumber]){  
+        {
+            if(!range[rangeNumber]){
                 for(i = rangeNumber; i<=rangeNumber+w; i++){
                     if(i >= n-1)
                         break;
@@ -31,7 +31,7 @@ class Solution {
                 }
                 for(j = i; j<=i+w-1;j++){
                     if(j<n && !range[j]){
-                        range[j] = true;                   
+                        range[j] = true;
                     }
                 }
                 rangeNumber = j;
@@ -39,7 +39,7 @@ class Solution {
                 if(rangeNumber >= n-1)
                     break;
             }else{
-                rangeNumber++;                
+                rangeNumber++;
             }
         }
         return answer;
